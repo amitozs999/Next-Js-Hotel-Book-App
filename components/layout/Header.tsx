@@ -5,12 +5,14 @@ import Link from "next/link";
 import React from "react";
 
 const Header = () => {
-  const { data } = useSession();
+  const { data } = useSession();     //gives current logged in (/) in user details
 
   console.log(data+'here1');
   console.log(data?.user+'here1');
   console.log(data?.user?.email+'here1');
   console.log(data?.user?.name+'here1');
+
+  
   const logoutHandler = () => {
     signOut();
   };
