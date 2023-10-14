@@ -123,3 +123,78 @@ export const deleteRoom = catchAsyncErrors( async (req: NextRequest, { params }:
     });
   }
 );
+
+
+
+
+
+// Create/Update room review  =>  /api/reviews
+export const createRoomReview = catchAsyncErrors(async (req: NextRequest) => {
+
+  const body = await req.json();
+  const { rating, comment, roomId } = body;
+
+  const review = {
+    user: req.user._id,
+    rating: Number(rating),
+    comment,
+  };
+
+  const room = await Room.findById(roomId);
+
+
+   //cur user has given review for this room
+  const isReviewed = room?.reviews?.find(
+    (r: IReview) => r.user?.toString() === req?.user?._id?.toString()
+  );
+
+
+  //if yes update it
+  if (isReviewed) {
+    room?.reviews?.forEach((review: IReview) => {
+      if (review.user?.toString() === req?.user?._id?.toString()) {
+        review.comment = comment;
+        review.rating = rating;
+      }
+    });
+  } else {
+
+    //else just add it
+    room.reviews.push(review);
+    room.numOfReviews = room.reviews.length;
+  }
+
+
+  //update room whole rating avg
+  room.ratings =
+    room?.reviews?.reduce(
+      (acc: number, item: { rating: number }) => item.rating + acc,
+      0
+    ) / room?.reviews?.length;
+
+
+  await room.save();
+
+  return NextResponse.json({
+    success: true,
+  });
+});
+
+
+
+// Can user review room  =>  /api/reviews/can_review
+export const canReview = catchAsyncErrors(async (req: NextRequest) => {
+
+  const { searchParams } = new URL(req.url);
+
+  const roomId = searchParams.get("roomId");
+
+  //if user has done booking for this room then only he can review
+  const bookings = await Booking.find({ user: req.user._id, room: roomId });
+
+  const canReview = bookings?.length > 0 ? true : false;
+
+  return NextResponse.json({
+    canReview,
+  });
+});
