@@ -1,6 +1,8 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
+<!-- // // complile seeder file and put complied file in temp then run this compled file which is present in .temp/seeder/seeder.js the remove this temp folder after that -->
+
 
 First, run the development server:
 
