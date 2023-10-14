@@ -1,10 +1,15 @@
 "use client"; // Error components must be Client Components
 
+interface CustomError extends Error {
+  errMessage: string;
+}
+
+
 export default function Error({
   error,
   reset,
 }: {
-  error: Error;
+error: CustomError;
   reset?: () => void;
 }) {
   return (
