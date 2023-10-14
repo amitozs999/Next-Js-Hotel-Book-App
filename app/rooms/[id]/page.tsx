@@ -35,3 +35,9 @@ export async function generateMetadata({ params }: Props) {
     title: data?.room?.name,   //set this in title
   };
 }
+
+
+
+
+
+//export default async function   (syntax for default page function)
