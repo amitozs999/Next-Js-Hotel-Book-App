@@ -55,7 +55,7 @@ export interface IRoom extends Document {
   images: IImage[];
   category: string;
   reviews: IReview[];
-  user: mongoose.Schema.Types.ObjectId;
+  user: IUser;
   createdAt: Date;
 }
 

@@ -3,6 +3,8 @@ import Room, { IRoom } from "../models/room";
 import ErrorHandler from "../utils/errorHandler";
 import { catchAsyncErrors } from "../middlewares/catchAsyncErrors";
 import APIFilters from "../utils/apiFilters";
+import { IReview } from "../models/room";
+import Booking from "../models/booking";
 
 // Get all rooms  =>  /api/rooms
 
@@ -193,6 +195,8 @@ export const canReview = catchAsyncErrors(async (req: NextRequest) => {
   const bookings = await Booking.find({ user: req.user._id, room: roomId });
 
   const canReview = bookings?.length > 0 ? true : false;
+
+  console.log(canReview+'ff');
 
   return NextResponse.json({
     canReview,

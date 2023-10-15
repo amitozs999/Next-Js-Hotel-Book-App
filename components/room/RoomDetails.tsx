@@ -18,6 +18,9 @@ interface Props {
 const RoomDetails = ({ data }: Props) => {
   const { room } = data;
 
+  console.log(data+'yo1');
+  console.log(room.reviews.length+'yo');
+
   return (
     <div className="container container-fluid">
       <h2 className="mt-5">{room.name}</h2>
@@ -59,10 +62,16 @@ const RoomDetails = ({ data }: Props) => {
           )}
         </div>
       </div>
+      
 
+      <h1>
+        hhhhh
+      </h1>
+      {/* console.log(room?._id); */}
       <NewReview roomId={room?._id} />
       <ListReviews reviews={room?.reviews} />
     </div>
+    
   );
 };
 

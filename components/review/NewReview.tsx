@@ -18,7 +18,7 @@ const NewReview = ({ roomId }: { roomId: string }) => {
 
   useEffect(() => {
     if (error && "data" in error) {
-      toast.error(error?.data?.errMessage);
+      //toast.error(error?.data?.errMessage);
     }
 
     if (isSuccess) {
@@ -42,6 +42,8 @@ const NewReview = ({ roomId }: { roomId: string }) => {
   return (
     <>
       {canReview && (
+
+        
         <button
           type="button"
           className="btn form-btn mt-4 mb-5"
@@ -51,6 +53,8 @@ const NewReview = ({ roomId }: { roomId: string }) => {
           Submit Your Review
         </button>
       )}
+
+      
       <div
         className="modal fade"
         id="ratingModal"

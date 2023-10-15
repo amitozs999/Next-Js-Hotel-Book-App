@@ -8,7 +8,9 @@ interface Props {
 
 //fetch room details on frontend page based on room id
 const getRoom = async (id: string) => {
-  const res = await fetch(`${process.env.API_URL}/api/rooms/${id}`);
+  const res = await fetch(`${process.env.API_URL}/api/rooms/${id}`, {
+    cache: "no-cache",   //if cache used same fetched value again again instead of updated one
+  });
   return res.json();
 };
 
