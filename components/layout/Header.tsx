@@ -2,15 +2,32 @@
 
 import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
+
+import { setIsAuthenticated, setUser } from "@/redux/features/userSlice";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+
+
 
 const Header = () => {
+
+  const dispatch = useAppDispatch();
+  const { user } = useAppSelector((state) => state.auth);
+
+
   const { data } = useSession();     //gives current logged in (/) in user details
 
   console.log(data+'here1');
   console.log(data?.user+'here1');
   console.log(data?.user?.email+'here1');
   console.log(data?.user?.name+'here1');
+
+  useEffect(() => {
+    if (data) {
+      dispatch(setUser(data?.user));
+      dispatch(setIsAuthenticated(true));
+    }
+  }, [data]);
 
   
   const logoutHandler = () => {
@@ -41,10 +58,8 @@ const Header = () => {
       {/* //show based on if user is logged in or not */}
         <div className="col-6 col-lg-3 mt-3 mt-md-0 text-end">
 
-          {data?.user ? (
-
+        {user ? (
             <div className="ml-4 dropdown d-line">
-
               <button
                 className="btn dropdown-toggle"
                 type="button"
@@ -52,12 +67,11 @@ const Header = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-
-              <figure className="avatar avatar-nav">
+                <figure className="avatar avatar-nav">
                   <img
                     src={
-                      data?.user?.avatar
-                        ? data?.user?.avatar?.url
+                      user?.avatar
+                        ? user?.avatar?.url
                         : "/images/default_avatar.jpg"
                     }
                     alt="John Doe"
@@ -65,16 +79,9 @@ const Header = () => {
                     height="50"
                     width="50"
                   />
-               </figure>
-
-
-
-             <span className="placeholder-glow ps-1">
-                  {" "}
-                  {data?.user?.name}
-                </span>
+                </figure>
+                <span className="placeholder-glow ps-1"> {user?.name}</span>
               </button>
-
 
               <div
                 className="dropdown-menu w-100"
@@ -98,7 +105,7 @@ const Header = () => {
                 </Link>
               </div>
             </div>
-          ) : (
+          )  : (
             <>
               {data === undefined && (
                 <div className="placeholder-glow">

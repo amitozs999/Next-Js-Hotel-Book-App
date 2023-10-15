@@ -53,19 +53,25 @@ export const updateProfile = catchAsyncErrors(async (req: NextRequest) => {
 
 // Update password  =>  /api/me/update_password
 export const updatePassword = catchAsyncErrors(async (req: NextRequest) => {
+
+  console.log('hijo');
   const body = await req.json();
-
+  console.log('hijoo');
   const user = await User.findById(req?.user?._id).select("+password");
-
+  console.log('hijooo');
+  console.log(user);
   const isMatched = await user.comparePassword(body.oldPassword);
 
+  console.log(isMatched+'yy');
+  console.log('hijo1ismatch');
   if (!isMatched) {
+    console.log('hijo1ismathincorrec');
     throw new ErrorHandler("Old password is incorrect", 400);
   }
 
   user.password = body.password;
   await user.save();
-
+  console.log('hijo1ismathsave');
   return NextResponse.json({
     success: true,
   });
@@ -157,7 +163,7 @@ export const resetPassword = catchAsyncErrors(
       .digest("hex");
 
       //check if any user has this pasw token
-      
+
     const user = await User.findOne({
       resetPasswordToken,
       resetPasswordExpire: { $gt: Date.now() },

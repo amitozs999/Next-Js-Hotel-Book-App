@@ -25,19 +25,30 @@ const UpdateProfile = () => {
 
   const [updateSession, { data }] = useLazyUpdateSessionQuery();
 
-  if (data) dispatch(setUser(data?.user));
+  if (data) {
+    console.log(data+'curuser here data');
+    dispatch(setUser(data?.user));
+
+  }
 
   useEffect(() => {
+
+    console.log('curuser here');
     if (currentUser) {
+      console.log('curuser here yes');
       setName(currentUser?.name);
       setEmail(currentUser?.email);
     }
 
     if (error && "data" in error) {
+
+      console.log('curuser here no');
       toast.error(error?.data?.errMessage);
     }
 
     if (isSuccess) {
+
+      console.log('curuser here refresh');
       //@ts-ignore
       updateSession();
 

@@ -8,7 +8,7 @@ export const isAuthenticatedUser = async (
   next: any
 ) => {
   const session = await getToken({ req });
-
+  console.log('hijo11');
   if (!session) {
     return NextResponse.json(
       {
@@ -19,6 +19,6 @@ export const isAuthenticatedUser = async (
   }
 
   req.user = session.user as IUser;
-
+  console.log('hijo11next');
   return next();  //an now move with controller code further
 };
