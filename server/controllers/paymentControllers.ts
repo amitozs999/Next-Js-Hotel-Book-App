@@ -33,7 +33,7 @@ export const stripeCheckoutSession = catchAsyncErrors(
       line_items: [
         {
           price_data: {
-            currency: "usd",
+            currency: "INR",
             unit_amount: Number(roomAmount) * 100,
             product_data: {
               name: room?.name,
@@ -46,6 +46,8 @@ export const stripeCheckoutSession = catchAsyncErrors(
       ],
     });
 
+    console.log('stripe here')
+
     return NextResponse.json(session);
   }
 );
@@ -56,6 +58,8 @@ export const stripeCheckoutSession = catchAsyncErrors(
 // Create new booking after payment  =>  /api/payment/webhook
 export const webhookCheckout = async (req: NextRequest) => {
   try {
+
+    console.log("stripe booking1");
     const rawBody = await req.text();
     const signature = headers().get("Stripe-Signature");
 
@@ -66,6 +70,8 @@ export const webhookCheckout = async (req: NextRequest) => {
     );
 
     if (event.type === "checkout.session.completed") {
+
+      console.log("stripe booking2");
       const session = event.data.object;
 
       const room = session.client_reference_id;
@@ -92,6 +98,8 @@ export const webhookCheckout = async (req: NextRequest) => {
         paymentInfo,
         paidAt: Date.now(),
       });
+
+      console.log("stripe booking");
 
       return NextResponse.json({ success: true });
     }

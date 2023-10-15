@@ -46,12 +46,22 @@ const RoomDetails = ({ data }: Props) => {
 
         <div className="col-12 col-md-6 col-lg-4">
           <BookingDatePicker room={room} />
-          // Room Map - TODO
+
+          {room?.location && (
+            <div className="my-5">
+              <h4 className="my-2">Room Location:</h4>
+              <div
+                id="room-map"
+                className="shadow rounded"
+                style={{ height: 350, width: "100%" }}
+              ></div>
+            </div>
+          )}
         </div>
       </div>
 
-      <NewReview />
-      <ListReviews />
+      <NewReview roomId={room?._id} />
+      <ListReviews reviews={room?.reviews} />
     </div>
   );
 };

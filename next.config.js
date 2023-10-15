@@ -11,13 +11,13 @@ const nextConfig = {
           NEXTAUTH_SECRET: "KSDFJKLSDJFLKSDFJSLDKF934KJLDJGDLKGFJDF",
 
 
-          STRIPE_WEBHOOK_SECRET: "",
+          STRIPE_WEBHOOK_SECRET: "whsec_dcd9fe81e7a5d0c19b76758d75fddcc42b8322c24c6b06215133fdee225f348e",
 
-          STRIPE_SECRET_KEY: "",
+          STRIPE_SECRET_KEY: "sk_test_51Nmd0wSGLLC7E7DkJKeCYpnco7neDevXP4hJNSAHOKnXH7WdjZAdSJIFtZBMlFbsUv8QTyyUnFlL3iBAyj5BvxjP00KqCZkcUq",
       
-          CLOUDINARY_CLOUD_NAME: "",
-          CLOUDINARY_API_KEY: "",
-          CLOUDINARY_API_SECRET: "",
+          CLOUDINARY_CLOUD_NAME: "dlwkqblhx",
+          CLOUDINARY_API_KEY: "455844863614842",
+          CLOUDINARY_API_SECRET: "c-aWfJvCg1mqEGDkmVlJFaDdnVo",
       
           SMTP_HOST: "sandbox.smtp.mailtrap.io",
           SMTP_PORT: 2525,
@@ -26,7 +26,7 @@ const nextConfig = {
           SMTP_FROM_EMAIL: "noreply@bookit.com",
           SMTP_FROM_NAME: "BookIT",
       
-          GEOCODER_API_KEY: "",
+          GEOCODER_API_KEY: "KBnYKpNZmoHkZ9gNdyO7afcCtxbb1tI3",
           GEOCODER_PROVIDER: "mapquest",
       
           MAPBOX_ACCESS_TOKEN: "",
