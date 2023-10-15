@@ -109,17 +109,25 @@ export const forgotPassword = catchAsyncErrors(async (req: NextRequest) => {
 
   const user = await User.findOne({ email: body.email });
 
+  console.log('forg here');
+
   if (!user) {
+    console.log('forg here1');
     throw new ErrorHandler("User not found with this email", 404);
   }
-
+  console.log('forg here22');
   // Get reset token
   const resetToken = user.getResetPasswordToken();
+
+  console.log('forg here2');
+  console.log(resetToken);
 
   await user.save();
 
   // Create reset password url
   const resetUrl = `${process.env.API_URL}/password/reset/${resetToken}`;
+
+  console.log(resetUrl);
 
   const message = resetPasswordHTMLTemplate(user?.name, resetUrl);
 
@@ -132,6 +140,8 @@ export const forgotPassword = catchAsyncErrors(async (req: NextRequest) => {
       message,
     });
   } catch (error: any) {
+
+    console.log('error je');
 
     user.resetPasswordToken = undefined;
     user.resetPasswordExpire = undefined;

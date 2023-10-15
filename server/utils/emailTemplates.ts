@@ -451,10 +451,10 @@ export const resetPasswordHTMLTemplate = (
             <tr>
               <td class="email-masthead">
                 <a
-                  href="https://bookit.com"
+                  href="https://hotelapp.com"
                   class="f-fallback email-masthead_name"
                 >
-                  BookIT
+                  Hotel App
                 </a>
               </td>
             </tr>
@@ -480,7 +480,7 @@ export const resetPasswordHTMLTemplate = (
                         <h1>Hi, ${username},</h1>
                         <p>
                           You recently requested to reset your password for your
-                          BookIT account. Use the button below to reset it.
+                         Hotel App account. Use the button below to reset it.
                           <strong
                             >This password reset is only valid for the next 30
                             minutes.</strong
@@ -524,7 +524,7 @@ export const resetPasswordHTMLTemplate = (
                           <a href="{{support_url}}">contact support</a> if you
                           have questions.
                         </p>
-                        <p>Thanks, <br />The BookIT team</p>
+                        <p>Thanks, <br />The Hotel App team</p>
 
                         <table class="body-sub" role="presentation">
                           <tr>
@@ -559,7 +559,7 @@ export const resetPasswordHTMLTemplate = (
                   <tr>
                     <td class="content-cell" align="center">
                       <p class="f-fallback sub align-center">
-                        BookIT
+                      Hotel App
                         <br />1234 Street Rd. <br />Suite 1234
                       </p>
                     </td>

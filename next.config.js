@@ -21,14 +21,14 @@ const nextConfig = {
       
           SMTP_HOST: "sandbox.smtp.mailtrap.io",
           SMTP_PORT: 2525,
-          SMTP_USER: "",
-          SMTP_PASSWORD: "",
-          SMTP_FROM_EMAIL: "noreply@bookit.com",
-          SMTP_FROM_NAME: "BookIT",
+          SMTP_USER: "d16aab0f5e3778",
+          SMTP_PASSWORD: "2c05fab06732fc",
+          SMTP_FROM_EMAIL: "noreply@hotelapp.com",
+          SMTP_FROM_NAME: "Hotelapp",
       
           GEOCODER_API_KEY: "KBnYKpNZmoHkZ9gNdyO7afcCtxbb1tI3",
           GEOCODER_PROVIDER: "mapquest",
-      
+         
           MAPBOX_ACCESS_TOKEN: "",
         }
         ,
