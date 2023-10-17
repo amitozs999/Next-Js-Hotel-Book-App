@@ -27,6 +27,7 @@
     "nodemailer": "^6.9.6",
     "react": "latest",
     "react-bootstrap": "^2.9.0",
+    "react-chartjs-2": "^5.2.0",
     "react-datepicker": "^4.20.0",
     "react-dom": "latest",
     "react-hot-toast": "^2.4.1",
