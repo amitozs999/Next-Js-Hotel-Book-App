@@ -209,8 +209,11 @@ export const resetPassword = catchAsyncErrors(
 
 // Get all users  =>  /api/admin/users
 export const allAdminUsers = catchAsyncErrors(async (req: NextRequest) => {
-  const users = await User.find();
 
+  console.log('hereji');
+  const users = await User.find();
+  
+  console.log('hereji'+users);
   return NextResponse.json({
     users,
   });

@@ -46,7 +46,7 @@ const Invoice = ({ data }: Props) => {
               </div>
               <h1>INVOICE # {booking?._id}</h1>
               <div id="company" className="clearfix">
-                <div>BookIT</div>
+                <div>Hotel App</div>
                 <div>
                   455 Foggy Heights,
                   <br />

@@ -1,5 +1,5 @@
 import dbConnect from "@/server/config/dbConnect";
-import { allAdminRooms, newRoom } from "@/server/controllers/roomControllers";
+import { allAdminUsers } from "@/server/controllers/authControllers";
 import {
   authorizeRoles,
   isAuthenticatedUser,
@@ -13,13 +13,8 @@ const router = createEdgeRouter<NextRequest, RequestContext>();
 
 dbConnect();
 
-router.use(isAuthenticatedUser, authorizeRoles("admin")).get(allAdminRooms);
-router.use(isAuthenticatedUser, authorizeRoles("admin")).post(newRoom);
+router.use(isAuthenticatedUser, authorizeRoles("admin")).get(allAdminUsers);
 
 export async function GET(request: NextRequest, ctx: RequestContext) {
-  return router.run(request, ctx);
-}
-
-export async function POST(request: NextRequest, ctx: RequestContext) {
   return router.run(request, ctx);
 }

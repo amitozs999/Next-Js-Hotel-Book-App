@@ -17,10 +17,10 @@ const Header = () => {
 
   const { data } = useSession();     //gives current logged in (/) in user details
 
-  console.log(data+'here1');
-  console.log(data?.user+'here1');
-  console.log(data?.user?.email+'here1');
-  console.log(data?.user?.name+'here1');
+  // console.log(data+'here1');
+  // console.log(data?.user+'here1');
+  // console.log(data?.user?.email+'here1');
+  // console.log(data?.user?.name+'here1');
 
   useEffect(() => {
     if (data) {
@@ -47,7 +47,7 @@ const Header = () => {
               <img
                 style={{ cursor: "pointer" }}
                 src="/images/bookit_logo.png"
-                alt="BookIT"
+                alt="Hotel App"
               />
 
             </a>

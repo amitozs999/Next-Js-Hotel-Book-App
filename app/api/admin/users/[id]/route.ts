@@ -1,5 +1,9 @@
 import dbConnect from "@/server/config/dbConnect";
-import { deleteRoom, updateRoom } from "@/server/controllers/roomControllers";
+import {
+  deleteUser,
+  getUserDetails,
+  updateUser,
+} from "@/server/controllers/authControllers";
 import {
   authorizeRoles,
   isAuthenticatedUser,
@@ -17,8 +21,15 @@ const router = createEdgeRouter<NextRequest, RequestContext>();
 
 dbConnect();
 
-router.use(isAuthenticatedUser, authorizeRoles("admin")).put(updateRoom);
-router.use(isAuthenticatedUser, authorizeRoles("admin")).delete(deleteRoom);
+router.use(isAuthenticatedUser, authorizeRoles("admin"));
+
+router.get(getUserDetails);
+router.put(updateUser);
+router.delete(deleteUser);
+
+export async function GET(request: NextRequest, ctx: RequestContext) {
+  return router.run(request, ctx);
+}
 
 export async function PUT(request: NextRequest, ctx: RequestContext) {
   return router.run(request, ctx);

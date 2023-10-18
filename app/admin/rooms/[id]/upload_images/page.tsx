@@ -29,5 +29,7 @@ export default async function AdminUploadImagesPage({
     return <Error error={data} />;
   }
 
+  console.log('roomdet'+data.images);
+
   return <UploadRoomImages data={data} />;  //send room details in uplroomimages comp
 }

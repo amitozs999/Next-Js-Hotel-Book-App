@@ -24,6 +24,7 @@ const UploadRoomImages = ({ data }: Props) => {
 
   useEffect(() => {
     if (data) {
+      console.log("listofItems: ",  data); 
       setUploadedImages(data?.room?.images);
     }
   }, [data]);
