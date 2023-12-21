@@ -142,7 +142,7 @@ const UploadRoomImages = ({ data }: Props) => {
                 <p className="text-warning">New Images:</p>
                 <div className="row mt-4">
                   {imagesPreview?.map((img) => (
-                    <div className="col-md-3 mt-2">
+                    <div key={img} className="col-md-3 mt-2">
                       <div className="card">
                         <img
                           src={img}
@@ -173,7 +173,7 @@ const UploadRoomImages = ({ data }: Props) => {
                 <p className="text-success">Room Uploaded Images:</p>
                 <div className="row mt-1">
                   {uploadedImages?.map((img) => (
-                    <div className="col-md-3 mt-2">
+                    <div key={img.url} className="col-md-3 mt-2">
                       <div className="card">
                         <img
                           src={img?.url}

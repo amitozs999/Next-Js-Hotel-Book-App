@@ -1,6 +1,7 @@
 import UpdatePassword from "@/components/user/UpdatePassword";
 import React from "react";
 
+import { NextResponse } from "next/server";
 export const metadata = {
   title: "Update Password",
 };

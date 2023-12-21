@@ -1,6 +1,7 @@
 import Error from "@/app/error";
 import RoomDetails from "@/components/room/RoomDetails";
 
+import { NextResponse } from "next/server";
 interface Props {
   params: { id: string };
 }

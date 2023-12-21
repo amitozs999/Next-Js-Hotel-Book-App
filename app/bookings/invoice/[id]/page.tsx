@@ -2,6 +2,7 @@ import Error from "@/app/error";
 import Invoice from "@/components/invoice/Invoice";
 import { getAuthHeader } from "@/helpers/authHeader";
 
+import { NextResponse } from "next/server";
 export const metadata = {
   title: "Booking Invoice",
 };

@@ -1,6 +1,7 @@
 import UpdateProfile from "@/components/user/UpdateProfile";
 import React from "react";
 
+import { NextResponse } from "next/server";
 export const metadata = {
   title: "Update Profile",
 };

@@ -2,6 +2,7 @@ import Error from "@/app/error";
 import MyBookings from "@/components/booking/MyBookings";
 import { getAuthHeader } from "@/helpers/authHeader";
 
+import { NextResponse } from "next/server";
 export const metadata = {
   title: "My Bookings",
 };

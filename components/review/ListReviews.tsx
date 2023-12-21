@@ -13,7 +13,7 @@ const ListReviews = ({ reviews }: Props) => {
       <hr />
 
       {reviews?.map((review) => (
-        <div className="review-card my-3">
+        <div key={review.user.name} className="review-card my-3">
           <div className="row">
             <div className="col-3 col-lg-1">
               <img

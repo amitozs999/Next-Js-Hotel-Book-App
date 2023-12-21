@@ -1,6 +1,7 @@
 import Search from "@/components/Search";
 import React from "react";
 
+import { NextResponse } from "next/server";
 export const metadata = {
   title: "Search Rooms",
 };
