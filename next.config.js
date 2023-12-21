@@ -3,8 +3,8 @@ const nextConfig = {
 
 
     env:{
-     // API_URL: "http://localhost:3000",
-       API_URL:"https://next-js-hotel-book-385lr1tev-amitoz-singhs-projects.vercel.app/",
+    API_URL: "http://localhost:3000",
+    //  API_URL:"https://next-js-hotel-book-385lr1tev-amitoz-singhs-projects.vercel.app/",
       DB_LOCAL_URI: 'mongodb+srv://singhekas08:hBVWcqE65vzXr1W8@cluster0.qp2xlqx.mongodb.net/mydb?retryWrites=true&w=majority',
           DB_URI:   'mongodb+srv://singhekas08:hBVWcqE65vzXr1W8@cluster0.qp2xlqx.mongodb.net/mydb?retryWrites=true&w=majority',
     
