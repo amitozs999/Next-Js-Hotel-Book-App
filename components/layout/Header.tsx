@@ -46,7 +46,7 @@ const Header = () => {
             <a href="/"   style={{color:"red",fontStyle:"normal"}}>
               {/* <img
                 style={{ cursor: "pointer" }}
-                src="/images/bookit_logo.png"
+                src="/images/"
                 alt="Hotel App"
               /> */}
               {/* //Hotel Booking App */}
@@ -80,13 +80,13 @@ const Header = () => {
                         ? user?.avatar?.url
                         : "/images/default_avatar.jpg"
                     }
-                    alt="John Doe"
-                    className="rounded-circle placeholder-glow"
-                    height="50"
-                    width="50"
+                    alt="Ekas Singh"
+                    className="rounded-circle placeholder-glow mt-2"
+                    height="45"
+                    width="45"
                   />
                 </figure>
-                <span className="placeholder-glow ps-1"> {user?.name}</span>
+                <span  className="placeholder-glow ps-1 ml-2 " style={{marginBottom:"10px",display:"inline-block"}}> {user?.name}</span>
               </button>
 
               <div

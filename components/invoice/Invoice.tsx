@@ -42,19 +42,14 @@ const Invoice = ({ data }: Props) => {
           <div id="booking_invoice" className="px-4 border border-secondary">
             <header className="clearfix">
               <div id="logo" className="my-4">
-                <img src="/images/bookit_logo.png" />
+                <img src=" " />
               </div>
               <h1>INVOICE # {booking?._id}</h1>
               <div id="company" className="clearfix">
                 <div>Hotel App</div>
+                
                 <div>
-                  455 Foggy Heights,
-                  <br />
-                  AZ 85004, US
-                </div>
-                <div>(602) 519-0450</div>
-                <div>
-                  <a href="mailto:info@bookit.com">info@bookit.com</a>
+                  <a href="mailto:info@bookingapp.com">info@bookingapp.com</a>
                 </div>
               </div>
               <div id="project">

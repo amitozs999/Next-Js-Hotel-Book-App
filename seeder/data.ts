@@ -16,13 +16,10 @@ export const rooms = [
     numOfReviews: 0,
     images: [
       {
-        public_id: "bookit/demo/ny4n2w1ubdnfktua8stg",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1693135931/bookit/demo/ny4n2w1ubdnfktua8stg.jpg",
+        public_id: " ",
+        url: " ",
       },
-      {
-        public_id: "bookit/demo/ao7enhxobr0z1qyxgyki",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1693135931/bookit/demo/ao7enhxobr0z1qyxgyki.jpg",
-      },
+       
     ],
     category: "King",
     reviews: [],
@@ -44,12 +41,8 @@ export const rooms = [
     numOfReviews: 0,
     images: [
       {
-        public_id: "bookit/demo/gbabqnb7nzvc7gmmpcvg",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1693136060/bookit/demo/gbabqnb7nzvc7gmmpcvg.jpg",
-      },
-      {
-        public_id: "bookit/demo/tvheutup1idr5wi0p5bq",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1694680598/bookit/demo/tvheutup1idr5wi0p5bq.jpg",
+        public_id: " ",
+        url: " ",
       },
     ],
     category: "Twins",
@@ -72,12 +65,8 @@ export const rooms = [
     numOfReviews: 0,
     images: [
       {
-        public_id: "bookit/demo/nhhthdrrvaundinfnyxd",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1693136187/bookit/demo/nhhthdrrvaundinfnyxd.jpg",
-      },
-      {
-        public_id: "bookit/demo/qsmprvvkshpwynqinz8i",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1693136187/bookit/demo/qsmprvvkshpwynqinz8i.jpg",
+        public_id: " ",
+        url: " ",
       },
     ],
     category: "King",
@@ -100,16 +89,8 @@ export const rooms = [
     numOfReviews: 0,
     images: [
       {
-        public_id: "bookit/demo/ahxbixikavvrlokgf8jp",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1693136394/bookit/demo/ahxbixikavvrlokgf8jp.jpg",
-      },
-      {
-        public_id: "bookit/demo/m7hgvpqj6kbqjsma0gfy",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1693136394/bookit/demo/m7hgvpqj6kbqjsma0gfy.jpg",
-      },
-      {
-        public_id: "bookit/demo/inpn3k94tvsmdaun0dsj",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1693136394/bookit/demo/inpn3k94tvsmdaun0dsj.jpg",
+        public_id: " ",
+        url: " ",
       },
     ],
     category: "Single",
@@ -132,12 +113,8 @@ export const rooms = [
     numOfReviews: 0,
     images: [
       {
-        public_id: "bookit/demo/ir1705u1vtfgzvqqdfh2",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1693136765/bookit/demo/ir1705u1vtfgzvqqdfh2.jpg",
-      },
-      {
-        public_id: "bookit/demo/o3ieyr8gltwhwccgqzia",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1693136765/bookit/demo/o3ieyr8gltwhwccgqzia.jpg",
+        public_id: " ",
+        url: " ",
       },
     ],
     category: "King",
@@ -160,8 +137,8 @@ export const rooms = [
     numOfReviews: 0,
     images: [
       {
-        public_id: "bookit/demo/hmvqt42lzdjc197ynrtk",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1693136789/bookit/demo/hmvqt42lzdjc197ynrtk.jpg",
+        public_id: " ",
+        url: " ",
       },
     ],
     category: "Twins",
@@ -184,8 +161,8 @@ export const rooms = [
     numOfReviews: 0,
     images: [
       {
-        public_id: "bookit/demo/aenyd4econmkcvyiyjkc",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1693136804/bookit/demo/aenyd4econmkcvyiyjkc.jpg",
+        public_id: " ",
+        url: " ",
       },
     ],
     category: "Single",
@@ -208,12 +185,8 @@ export const rooms = [
     numOfReviews: 0,
     images: [
       {
-        public_id: "bookit/demo/bwrnbs3sqzd6bbuyau47",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1693136823/bookit/demo/bwrnbs3sqzd6bbuyau47.jpg",
-      },
-      {
-        public_id: "bookit/demo/hhjpp67jiqyacv8gvmso",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1693136822/bookit/demo/hhjpp67jiqyacv8gvmso.jpg",
+        public_id: " ",
+        url: " ",
       },
     ],
     category: "Single",

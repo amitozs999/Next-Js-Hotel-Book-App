@@ -9,7 +9,7 @@ const nextConfig = {
           DB_URI:   'mongodb+srv://singhekas08:hBVWcqE65vzXr1W8@cluster0.qp2xlqx.mongodb.net/mydb?retryWrites=true&w=majority',
     
           // NEXTAUTH_URL: "http://localhost:3000",
-             NEXTAUTH_URL: "https://next-js-hotel-book-app-amitoz-singhs-projects.vercel.app/",
+              NEXTAUTH_URL: "https://next-js-hotel-book-app-amitoz-singhs-projects.vercel.app/",
           NEXTAUTH_SECRET: "KSDFJKLSDJFLKSDFJSLDKF934KJLDJGDLKGFJDF",
 
 
