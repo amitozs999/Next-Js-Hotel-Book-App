@@ -8,7 +8,7 @@ interface Props {
 
 const ListReviews = ({ reviews }: Props) => {
   return (
-    <div className="reviews w-75 mb-5">
+    <div className="reviews w-75 mb-5 ml-6">
       <h3>{reviews?.length} Reviews</h3>
       <hr />
 

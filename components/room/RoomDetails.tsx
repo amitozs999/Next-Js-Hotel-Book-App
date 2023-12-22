@@ -23,10 +23,10 @@ const RoomDetails = ({ data }: Props) => {
 
   return (
     <div className="container container-fluid">
-      <h2 className="mt-5">{room.name}</h2>
-      <p>{room.address}</p>
+      <h1 style={{fontSize:"2rem"}} className="mt-5   ml-8 font-semibold ">{room.name}</h1>
+      <p className="ml-8  mt-2">{room.address}</p>
 
-      <div className="ratings mt-auto mb-3">
+      <div className="ratings mt-auto mb-3 ml-8">
         <StarRatings
           rating={room?.ratings}
           starRatedColor="#e61e4d"
@@ -40,8 +40,8 @@ const RoomDetails = ({ data }: Props) => {
       <RoomImageSlider images={room?.images} />
 
       <div className="row my-5">
-        <div className="col-12 col-md-6 col-lg-8">
-          <h3>Description</h3>
+        <div className="col-12 col-md-6 col-lg-8 pl-10">
+          <h3 className="font-bold mb-2">Room Description</h3>
           <p>{room?.description}</p>
 
           <RoomFeatures room={room} />
@@ -50,7 +50,7 @@ const RoomDetails = ({ data }: Props) => {
         <div className="col-12 col-md-6 col-lg-4">
           <BookingDatePicker room={room} />
 
-          {room?.location && (
+          {/* {room?.location && (
             <div className="my-5">
               <h4 className="my-2">Room Location:</h4>
               <div
@@ -59,13 +59,13 @@ const RoomDetails = ({ data }: Props) => {
                 style={{ height: 350, width: "100%" }}
               ></div>
             </div>
-          )}
+          )} */}
         </div>
       </div>
       
 
-      <h1>
-        hhhhh
+      <h1 className="font-bold mb-2 ml-6">
+        All Reviews:
       </h1>
       {/* console.log(room?._id); */}
       <NewReview roomId={room?._id} />
