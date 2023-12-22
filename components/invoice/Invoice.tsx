@@ -96,7 +96,7 @@ const Invoice = ({ data }: Props) => {
                     <td colSpan={4} className="grand total">
                       <b>GRAND TOTAL</b>
                     </td>
-                    <td className="grand total">${booking?.amountPaid}</td>
+                    <td className="grand total">₹{booking?.amountPaid}</td>
                   </tr>
                 </tbody>
               </table>
