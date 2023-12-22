@@ -21,16 +21,23 @@ const Home = ({ data }: Props) => {
 
   const { rooms, resPerPage, filteredRoomsCount } = data;
   return (
-    <div>
-      <section id="rooms" className="container mt-5">
+    <div className="mt-5">
+       <Link href="/search" className="ml-6 back-to-search ">
+         Search your Room     
+         <i 
+          //className="fa fa-arrow-left me-1"
+         className="ml-3 mt-2	fa fa-arrow-circle-right"  
+       // className="  	fas fa-hotel"  
+          //className="bi bi-search"
+          ></i> 
+        </Link>
+      <section id="rooms" className="container mt-4">
         <h2 className="mb-3 ml-2 stays-heading">
           {location
             ? `${rooms?.length} rooms found in ${location}`
-            : "All Rooms"}
+            : ""}
         </h2>
-        <Link href="/search" className="ml-2 back-to-search">
-          <i className="fa fa-arrow-left me-1"></i> Back to Search
-        </Link>
+       
         <div className="row mt-4">
           {rooms?.length === 0 ? (
             <div className="alert alert-danger mt-5 w-100">

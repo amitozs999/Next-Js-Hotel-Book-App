@@ -43,14 +43,20 @@ const Header = () => {
 
           <div className="navbar-brand">
             
-            <a href="/">
-              <img
+            <a href="/"   style={{color:"red",fontStyle:"normal"}}>
+              {/* <img
                 style={{ cursor: "pointer" }}
                 src="/images/bookit_logo.png"
                 alt="Hotel App"
-              />
+              /> */}
+              {/* //Hotel Booking App */}
 
+<i className=" ml-10 	fas fa-hotel"  style={{color:"red",fontSize:"30px"}}> 
+
+  
+</i>  Hotels
             </a>
+            
           </div>
         </div>
 
