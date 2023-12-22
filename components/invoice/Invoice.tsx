@@ -83,7 +83,7 @@ const Invoice = ({ data }: Props) => {
                 <tbody>
                   <tr>
                     <td className="service">{booking?.room?.name}</td>
-                    <td className="desc">${booking?.room?.pricePerNight}</td>
+                    <td className="desc">₹{booking?.room?.pricePerNight}</td>
                     <td className="unit">
                       {new Date(booking?.checkInDate).toLocaleString("en-US")}
                     </td>

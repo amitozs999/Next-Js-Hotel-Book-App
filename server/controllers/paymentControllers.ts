@@ -11,6 +11,8 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 export const stripeCheckoutSession = catchAsyncErrors(
   async (req: NextRequest, { params }: { params: { id: string } }) => {
 
+    console.log("aaa now inside paymnent controller"+params);
+
     const { searchParams } = new URL(req.url);
 
     const checkInDate = searchParams.get("checkInDate");
@@ -46,7 +48,7 @@ export const stripeCheckoutSession = catchAsyncErrors(
       ],
     });
 
-    console.log('stripe here')
+    console.log('aaa stripe here sending nxt response' +session)
 
     return NextResponse.json(session);
   }

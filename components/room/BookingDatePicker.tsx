@@ -89,6 +89,7 @@ const BookingDatePicker = ({ room }: Props) => {
       daysOfStay,
       amount,
     };
+    console.log("aaa clicked pay"+checkoutData);
 
     stripeCheckout({ id: room?._id, checkoutData });
   };
@@ -111,7 +112,7 @@ const BookingDatePicker = ({ room }: Props) => {
   return (
     <div className="booking-card shadow p-4">
       <p className="price-per-night">
-        <b>${room?.pricePerNight}</b> / night
+        <b>₹{room?.pricePerNight}</b> / night
       </p>
 
       <hr />
@@ -151,7 +152,7 @@ const BookingDatePicker = ({ room }: Props) => {
           onClick={bookRoom}
           disabled={isLoading}
         >
-          Pay - ${daysOfStay * room?.pricePerNight}
+          Pay - ₹{daysOfStay * room?.pricePerNight}
         </button>
       )}
     </div>

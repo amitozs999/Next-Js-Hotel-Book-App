@@ -3,17 +3,19 @@ const nextConfig = {
 
 
     env:{
-  //  API_URL: "http://localhost:3000",
+   // API_URL: "http://localhost:3000",
     API_URL:"https://next-js-hotel-book-app-amitoz-singhs-projects.vercel.app",
       DB_LOCAL_URI: 'mongodb+srv://singhekas08:hBVWcqE65vzXr1W8@cluster0.qp2xlqx.mongodb.net/mydb?retryWrites=true&w=majority',
           DB_URI:   'mongodb+srv://singhekas08:hBVWcqE65vzXr1W8@cluster0.qp2xlqx.mongodb.net/mydb?retryWrites=true&w=majority',
     
-        //  NEXTAUTH_URL: "http://localhost:3000",
-               NEXTAUTH_URL: "https://next-js-hotel-book-app-amitoz-singhs-projects.vercel.app/",
+         // NEXTAUTH_URL: "http://localhost:3000",
+            NEXTAUTH_URL: "https://next-js-hotel-book-app-amitoz-singhs-projects.vercel.app/",
           NEXTAUTH_SECRET: "KSDFJKLSDJFLKSDFJSLDKF934KJLDJGDLKGFJDF",
 
 
-          STRIPE_WEBHOOK_SECRET: "whsec_dcd9fe81e7a5d0c19b76758d75fddcc42b8322c24c6b06215133fdee225f348e",
+         //dev STRIPE_WEBHOOK_SECRET: "whsec_dcd9fe81e7a5d0c19b76758d75fddcc42b8322c24c6b06215133fdee225f348e",
+
+          STRIPE_WEBHOOK_SECRET: "whsec_DSOzv9StgiF2C5wqfDq3M6Pn576aWdzB",
 
           STRIPE_SECRET_KEY: "sk_test_51Nmd0wSGLLC7E7DkJKeCYpnco7neDevXP4hJNSAHOKnXH7WdjZAdSJIFtZBMlFbsUv8QTyyUnFlL3iBAyj5BvxjP00KqCZkcUq",
       
